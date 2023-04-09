@@ -8,15 +8,25 @@ const tiempoTotalTsu = FechaFinalTsu.getTime() - FechaInicial.getTime();
 
 let progressBar = document.getElementById("barra_Progreso");
 
-//funcion que actualiza la barra de progreso
+//función que actualiza la barra de progreso
 let progresoActual = 0;
-let intervalId = setInterval(function () {
+function actualizarBarraProgreso() {
     let tiempoTranscurrido = new Date().getTime() - FechaInicial.getTime();
-    //console.log((((tiempoTranscurridoIngenieria/1000)/60)/60)/24);
+
     progresoActual = (tiempoTranscurrido / tiempoTotalIngenieria) * 100;
     progressBar.value = progresoActual;
+
+    console.log(progresoActual);
 
     if (progresoActual >= 100) {
         clearInterval(intervalId);
     }
+}
+
+
+//invocador de la función al cargar la página y cada 5 segundos después
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarBarraProgreso();
+    setInterval(actualizarBarraProgreso, 5000);
 });
+
