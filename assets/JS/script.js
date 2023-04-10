@@ -1,33 +1,42 @@
 const FechaInicial = new Date('2022-09-01');
-const FechaFinalIngenieria = new Date('2025-04-30');
-const FechaFinalTsu = new Date('2024-08-30');
+const FechaFinalIngenieria = new Date('2026-08-30');
+const FechaFinalTsu = new Date('2024-12-31');
 const tiempoTotalIngenieria = FechaFinalIngenieria.getTime() - FechaInicial.getTime();
 const tiempoTotalTsu = FechaFinalTsu.getTime() - FechaInicial.getTime();
 
-
-
-let progressBar = document.getElementById("barra_Progreso");
-
 //función que actualiza la barra de progreso
-let progresoActual = 0;
+let progressBar = document.getElementById("barra_Progreso");
+let progresoActualIngenieria = 0;
+let lista_porcentaje = document.getElementById("lista_porcentaje");
+
 function actualizarBarraProgreso() {
     let tiempoTranscurrido = new Date().getTime() - FechaInicial.getTime();
 
-    progresoActual = (tiempoTranscurrido / tiempoTotalIngenieria) * 100;
-    progressBar.value = progresoActual;
+    progresoActualIngenieria = (tiempoTranscurrido / tiempoTotalIngenieria) * 100;
+    progresoActualTsu = (tiempoTranscurrido / tiempoTotalTsu) * 100;
 
-    console.log(progresoActual);
+    progressBar.value = progresoActualIngenieria;
 
-    if (progresoActual >= 100) {
+    console.log(progresoActualIngenieria);
+    console.log(progresoActualTsu);
+
+    lista_porcentaje.innerHTML = "";
+
+
+    let liPorcentajeIngenieria = document.createElement("li");
+    liPorcentajeIngenieria.textContent = `Ingeniería: ${progresoActualIngenieria.toFixed(4)} %`;
+    lista_porcentaje.appendChild(liPorcentajeIngenieria);
+
+    let liPorcentajeTsu = document.createElement("li");
+    liPorcentajeTsu.textContent = `TSU: ${progresoActualTsu.toFixed(4)} %`;
+    lista_porcentaje.appendChild(liPorcentajeTsu);
+
+    if (progresoActualIngenieria >= 100) {
         clearInterval(intervalId);
     }
 }
 
-
 //función para el tiempo para terminar la ingenieria y el TSU
-let tiempoParaIngenieria = 0;
-let tiempoParaTsu = 0;
-
 let listaTiempoPara = document.getElementById("tiempo_Para");
 function tiempo_Para() {
     let tiempoParaIngenieria = (( FechaFinalIngenieria.getTime() - new Date().getTime()  ) / (1000 * 60 * 60));
@@ -47,16 +56,11 @@ function tiempo_Para() {
 
 }
 
-
-
-
-
-
 //invocador de la función al cargar la página y cada 5 segundos después
 document.addEventListener("DOMContentLoaded", function () {
     actualizarBarraProgreso();
     tiempo_Para();
-    setInterval(actualizarBarraProgreso, 25000);
+    setInterval(actualizarBarraProgreso, 120000);
     setInterval(tiempo_Para, 5000);
 });
 
