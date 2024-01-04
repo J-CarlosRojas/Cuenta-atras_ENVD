@@ -6,83 +6,38 @@ body {
 }
 
 .titulo {
-    font-size: 3rem;
+    font-size: 7rem;
+    margin-top: 4rem;
     margin-bottom: 20px;
     font-family: 'Anton', sans-serif;
     font-style: normal;
-    color: rgba(223, 43, 43, 0.71);
+    color: #000000;
 }
 
 .progreso {
     width: 80%;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.barra_Progreso {
-    appearance: none;
-    -webkit-appearance: none;
-    height: 15px;
-    margin: 0 auto;
-    border-radius: 14px;
-    width: 60%;
-    display: flex;
-}
-
-.barra_Progreso::-webkit-progress-bar {
-    background: transparent;
-    background-color: #d9d9d9;
-    border-radius: 14px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-
-.barra_Progreso::-webkit-progress-value {
-    background-color: rgba(223, 43, 43, 0.71);
+.barra_Progreso{
     position: relative;
-    border-radius: 14px;
+    background-color: #F2BC57;
+    width: 25rem;
+    height: 4rem;
+    transform: skew(-30deg);
+
+
 }
 
-.barra_Progreso::-moz-progress-bar {
-    background: transparent;
-    background-color: #d9d9d9;
-    border-radius: 14px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
+.barra_Progreso::-webkit-progress-bar{
+    background-color: #F2594B;
 
-.barra_Progreso::-moz-progress-value {
-    background-color: rgba(223, 43, 43, 0.71);
-    border-radius: 14px;
 }
-
-.listas {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    font-family: "manrope", sans-serif;
-    font-style: normal;
-    color: rgba(223, 43, 43, 0.71);
-    font-weight: 200;
-    text-align: left;
-}
-
-.listas p {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.listas ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.listas li {
-    font-size: 1rem;
-    padding-left: 2rem;
+/*Estilo del progreso*/
+.barra_Progreso::-webkit-progress-value{
+    background-color: #5B91A6;
 }
