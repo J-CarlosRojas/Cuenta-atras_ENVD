@@ -7,7 +7,7 @@ body {
 .titulo {
     font-size: 3rem;
     margin-bottom: 20px;
-    font-family: "manrope", sans-serif;
+    font-family: 'Anton', sans-serif;
     font-style: normal;
     color: rgba(223, 43, 43, 0.71);
 }
