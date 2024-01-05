@@ -54,6 +54,48 @@ body {
     text-shadow: 1px 1px 1px #F2506E, -1px 1px 1px #24BFB0;
 }
 
-.barras_cuatri{
+.barra_Progreso__Cuatrimestres {
+    position: relative; 
+}
+.progress-container {
+    position: relative; 
+}
+
+.porcentaje {
+    font-family: 'Chakra Petch', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #F2506E, -1px 1px 1px #24BFB0;
     
 }
+
+
+.barras_cuatri label{
+    font-size: 1.1rem;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #2b2627;
+    text-shadow: 1px 1px 1px #F2506E, -1px 1px 1px #24BFB0;
+}
+
+.barras_cuatri progress{
+    
+    background-color: #F2BC57;
+    width: 16rem;
+    height: 2rem;
+    transform: skew(-30deg);
+    margin-bottom: 1rem;
+}
+
+/*Estilo del faltante*/
+.barra_Progreso__Cuatrimestres::-webkit-progress-bar{
+    background-color: #F26BDC;
+
+}
+/*Estilo del progreso*/
+.barra_Progreso__Cuatrimestres::-webkit-progress-value{
+    background-color: #8DF2CD;
+}
+
