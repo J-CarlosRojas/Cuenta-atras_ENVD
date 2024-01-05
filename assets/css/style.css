@@ -12,6 +12,7 @@ body {
     font-family: 'Anton', sans-serif;
     font-style: normal;
     color: #000000;
+    text-shadow: 2px 2px 2px #F2506E, -2px 2px 2px #24BFB0;
 }
 
 .progreso {
@@ -29,10 +30,12 @@ body {
     width: 25rem;
     height: 4rem;
     transform: skew(-30deg);
+    margin-bottom: 3rem;
 
 
 }
 
+/*Estilo del faltante*/
 .barra_Progreso::-webkit-progress-bar{
     background-color: #F2594B;
 
@@ -40,4 +43,17 @@ body {
 /*Estilo del progreso*/
 .barra_Progreso::-webkit-progress-value{
     background-color: #5B91A6;
+}
+
+.listas{
+    
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #0d4361;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #F2506E, -1px 1px 1px #24BFB0;
+}
+
+.barras_cuatri{
+    
 }
