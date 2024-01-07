@@ -7,13 +7,13 @@ body {
 
 .cabecera{
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .cabecera_X_imagen{
     margin-right: 15px;
     height: 6rem;
-    align-items: center;
+    
 }
 
 .titulo {
