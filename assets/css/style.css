@@ -5,6 +5,17 @@ body {
     background-color: #FFF701;
 }
 
+.cabecera{
+    display: flex;
+    align-items: center;
+}
+
+.cabecera_X_imagen{
+    margin-right: 15px;
+    height: 6rem;
+    align-items: center;
+}
+
 .titulo {
     font-size: 7rem;
     margin-top: 4rem;
